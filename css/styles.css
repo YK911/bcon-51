@@ -17,6 +17,7 @@
   --accent-bg-cl: #ff6c00;
 
   /* Others */
+  --radius: 25px;
 }
 
 /**
@@ -32,6 +33,28 @@ body {
   color: var(--main-txt-cl);
 }
 
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
@@ -42,12 +65,24 @@ button {
   color: currentColor;
   cursor: pointer;
 }
-
-ul {
-  list-style: none;
+/* reset end */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -57,6 +92,8 @@ ul {
   color: var(--gray-txt-cl-60);
 }
 .title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: 1.17;
@@ -66,9 +103,15 @@ ul {
   color: var(--secondary-txt-cl);
 }
 .undertitle {
+  margin-bottom: 20px;
+
   color: #555555;
 }
 .btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -77,6 +120,8 @@ ul {
   color: currentColor;
 
   background-color: transparent;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: var(--radius);
 }
 .btn:hover,
 .btn:focus {
@@ -189,7 +234,12 @@ ul {
 }
 .about-img {
 }
+.about-right-side {
+  width: 470px;
+}
 .about-desc {
+  margin-bottom: 42px;
+
   font-size: 14px;
   line-height: 1.86;
   color: var(--light-gray-txt-cl);
@@ -295,6 +345,8 @@ ul {
   |============================
 */
 .footer {
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
 .footer-copyright {
   font-weight: 600;
