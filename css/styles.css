@@ -18,6 +18,9 @@
 
   /* Others */
   --radius: 25px;
+  --items: 3;
+  --col-indent: 30px;
+  --row-indent: var(--col-indent);
 }
 
 /**
@@ -53,6 +56,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -132,23 +137,56 @@ button {
 }
 /**
   |============================
+  | Card set
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--row-indent);
+  column-gap: var(--col-indent);
+}
+.card-set-item {
+  flex-basis: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
+}
+/**
+  |============================
   | Header styles
   |============================
 */
 .header {
+  padding-top: 22px;
+  padding-bottom: 22px;
+
   background-color: var(--main-bg-cl);
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-logo {
+  margin-right: 124px;
 }
 .header-img {
 }
 .header-nav {
+  margin-right: auto;
 }
 .header-nav-list {
+  display: flex;
+  gap: 30px;
 }
-.header-nav-item {
+/* .header-nav-item {
+  margin-right: 30px;
 }
+.header-nav-item:last-child {
+  margin: 0;
+} */
 .header-nav-link {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -160,6 +198,10 @@ button {
   color: var(--accent-txt-cl);
 }
 .header-contact {
+  margin-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -228,7 +270,13 @@ button {
 */
 .about {
 }
+.about-container {
+  display: flex;
+  gap: 30px;
+}
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 .about-item {
 }
@@ -254,13 +302,37 @@ button {
   background-color: var(--main-bg-cl);
 }
 .price-list {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
 }
 .price-item {
 }
-.price-inner-list {
+.price-item:first-child {
+  outline: 2px solid lightgreen;
+  outline-offset: -2px;
 }
+.price-item:last-child {
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
+}
+.price-inner-list {
+  width: 570px;
+  padding: 30px 20px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 20px; */
+}
+
 .price-inner-item {
   color: var(--gray-txt-cl);
+}
+.price-inner-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.price-btn {
+  display: block;
+  margin: 0 auto;
 }
 /**
   |============================
@@ -294,6 +366,7 @@ button {
 .team {
 }
 .team-list {
+  --row-indent: 50px;
 }
 .team-item {
 }
@@ -310,6 +383,22 @@ button {
   line-height: 1.36;
   text-align: center;
   color: var(--accent-txt-cl);
+}
+/**
+  |============================
+  | Gallery section
+  |============================
+*/
+.gallery {
+}
+.gallery-list {
+  --items: 4;
+}
+.gallery-item {
+}
+.card-set-item {
+}
+.gallery-img {
 }
 /**
   |============================
