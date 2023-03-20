@@ -26,7 +26,7 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="page" data-body>
     <!-- Header section -->
     <header class="header">
       <div class="container header-container">
@@ -56,51 +56,53 @@
           </ul>
         </nav>
         <a class="header-contact" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="btn btn-light" type="button">Online-booking</button>
+        <button class="btn btn-light" type="button" data-modal-open>Online-booking</button>
       </div>
     </header>
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="media">
-            <li class="media-item">
-              <a
-                class="media-link"
-                href="http://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-            </li>
-            <li class="media-item">
-              <a
-                class="media-link"
-                href="http://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Youtube
-              </a>
-            </li>
-          </ul>
-          <!-- 10 -->
-          <p class="uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
-          <!-- 30 -->
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-desc">
-            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-          </p>
+        <div class="container hero-container">
+          <div class="hero-left">
+            <ul class="media hero-media">
+              <li class="media-item">
+                <a
+                  class="media-link"
+                  href="http://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li class="media-item">
+                <a
+                  class="media-link"
+                  href="http://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right">
+            <p class="uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-desc">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            </p>
+          </div>
           <!-- Slider controls -->
-          <ul class="slider-controls">
+          <!-- <ul class="slider-controls">
             <li class="slider-controls-item">
               <button class="slider-controls-btn prev" type="button" disabled>Back</button>
             </li>
             <li class="slider-controls-item">
               <button class="slider-controls-btn next" type="button">Forward</button>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section>
       <!-- About section -->
@@ -198,55 +200,121 @@
         </div>
       </section>
       <!-- Team section -->
-      <section class="team" id="team">
+      <section class="team section" id="team">
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
-          <h2 class="title">Our barbers</h2>
+          <h2 class="title team-title">Our barbers</h2>
           <ul class="team-list card-set">
             <li class="team-item card-set-item">
               <img class="team-img" src="./images/team/img-1.jpg" alt="" width="370" height="346" />
-              <h3 class="team-title">John Smith</h3>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials">
-                <li class="socials-item">
-                  <a href="" class="socials-link">
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a href="" class="socials-link">
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a href="" class="socials-link">
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a href="" class="socials-link">
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrapper">
+                <h3 class="team-name">John Smith</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-item card-set-item">
               <img class="team-img" src="./images/team/img-2.jpg" alt="" width="370" height="346" />
-              <h3 class="team-title">Michele Doe</h3>
-              <p class="team-position">Extreme Barber</p>
+              <div class="team-wrapper">
+                <h3 class="team-name">Michele Doe</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-item card-set-item">
               <img class="team-img" src="./images/team/img-3.jpg" alt="" width="370" height="346" />
-              <h3 class="team-title">Alan Black</h3>
-              <p class="team-position">Extreme Barber</p>
+              <div class="team-wrapper">
+                <h3 class="team-name">Alan Black</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -254,7 +322,7 @@
       <!-- Gallery section -->
       <section class="section gallery">
         <div class="container">
-          <p class="uppertitle">In Latin, "barba" means "beard"</p>
+          <p class="uppertitle gallery-uppertitle">In Latin, "barba" means "beard"</p>
           <h2 hidden>Gallery</h2>
           <ul class="gallery-list card-set">
             <li class="gallery-item card-set-item">
@@ -265,6 +333,11 @@
                 width="270"
                 height="360"
               />
+              <div class="overlay">
+                <p class="overlay-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, odit?
+                </p>
+              </div>
             </li>
             <li class="gallery-item card-set-item">
               <img
@@ -360,5 +433,18 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="16" height="16">
+            <use href="./images/icons.svg#xmark-solid"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
