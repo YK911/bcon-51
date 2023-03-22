@@ -1,4 +1,6 @@
 const formEL = document.querySelector('[name="contact_form"]');
+const checkboxEl = document.querySelector('.modal-form-checkbox');
+const formBtnEl = document.querySelector('.modal-form-btn');
 
 formEL.addEventListener('submit', event => {
   event.preventDefault();
@@ -10,4 +12,9 @@ formEL.addEventListener('submit', event => {
   } else {
     alert('Ведіть дані в поля форми');
   }
+});
+
+checkboxEl.addEventListener('click', event => {
+  const btnStatus = !event.target.checked;
+  formBtnEl.toggleAttribute('disabled', btnStatus);
 });
