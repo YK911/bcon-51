@@ -99,16 +99,24 @@
             <p class="hero-desc">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
+
+            <!-- slider pagination -->
+            <ul class="slider-pagination">
+              <li class="slider-pagination-item active"></li>
+              <li class="slider-pagination-item"></li>
+              <li class="slider-pagination-item"></li>
+            </ul>
+
+            <!-- Slider controls -->
+            <ul class="slider-controls">
+              <li class="slider-controls-item">
+                <button class="slider-controls-btn prev" type="button" disabled>Back</button>
+              </li>
+              <li class="slider-controls-item">
+                <button class="slider-controls-btn next" type="button">Forward</button>
+              </li>
+            </ul>
           </div>
-          <!-- Slider controls -->
-          <!-- <ul class="slider-controls">
-            <li class="slider-controls-item">
-              <button class="slider-controls-btn prev" type="button" disabled>Back</button>
-            </li>
-            <li class="slider-controls-item">
-              <button class="slider-controls-btn next" type="button">Forward</button>
-            </li>
-          </ul> -->
         </div>
       </section>
       <!-- About section -->
@@ -181,19 +189,19 @@
         <div class="container benefits-container">
           <div class="benefits-left">
             <ul class="benefits-list">
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="fade-down-right" data-aos-delay="200">
                 <p class="benefits-quantity">600</p>
                 <p class="benefits-desc">Satisfied customers per day</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="fade-down-left" data-aos-delay="400">
                 <p class="benefits-quantity">50</p>
                 <p class="benefits-desc">Awards for excellent service</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="fade-up-right" data-aos-delay="600">
                 <p class="benefits-quantity">20</p>
                 <p class="benefits-desc">Kyiv’s best professional barbers</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="fade-up-left" data-aos-delay="800">
                 <p class="benefits-quantity">100</p>
                 <p class="benefits-desc">Gifts for regular customers</p>
               </li>
@@ -431,14 +439,28 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  st. Vasylkivska, 7A Kiev,&nbsp;08132
+                  <svg class="contacts-icons" width="24" height="24">
+                    <use href="./images/icons.svg#map-pin"></use>
+                  </svg>
+                  st. Vasylkivska, 7A <br />
+                  Kiev,&nbsp;08132
                 </a>
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="tel:+380441111111">+38 044 111 11 11</a>
+                <a class="contacts-link" href="tel:+380441111111">
+                  <svg class="contacts-icons" width="24" height="24">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                  +38 044 111 11 11
+                </a>
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <a class="contacts-link" href="mailto:barbershop@email.com">
+                  <svg class="contacts-icons" width="24" height="24">
+                    <use href="./images/icons.svg#mail"></use>
+                  </svg>
+                  barbershop@email.com
+                </a>
               </li>
             </ul>
           </address>
