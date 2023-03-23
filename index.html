@@ -24,11 +24,11 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <!-- Animation lib -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    /> -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -63,11 +63,26 @@
             Online-booking
           </button>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero-container">
           <div class="hero-left">
             <ul class="media hero-media">
@@ -100,14 +115,12 @@
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
 
-            <!-- slider pagination -->
             <ul class="slider-pagination">
               <li class="slider-pagination-item active"></li>
               <li class="slider-pagination-item"></li>
               <li class="slider-pagination-item"></li>
             </ul>
 
-            <!-- Slider controls -->
             <ul class="slider-controls">
               <li class="slider-controls-item">
                 <button class="slider-controls-btn prev" type="button" disabled>Back</button>
@@ -118,9 +131,9 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- About section -->
-      <section class="section about" id="about">
+      <!-- <section class="section about" id="about">
         <div class="container about-container">
           <ul class="about-list">
             <li class="about-item">
@@ -157,7 +170,7 @@
             <button class="btn" type="button">Online-booking</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Price section -->
       <section class="section price" id="price">
         <div class="container">
@@ -166,18 +179,34 @@
           <ul class="price-list">
             <li class="price-item" data-aos="fade-right">
               <ul class="price-inner-list">
-                <li class="price-inner-item">Men’s haircut from 300 uah.</li>
-                <li class="price-inner-item">Beard trim from 300 uah.</li>
-                <li class="price-inner-item">Mustache trim from 200 uah.</li>
-                <li class="price-inner-item">Straight razor shave from 200 uah.</li>
+                <li class="price-inner-item"
+                  ><span class="price-inner-desc">Men’s haircut</span> from 300 uah.
+                </li>
+                <li class="price-inner-item"
+                  ><span class="price-inner-desc">Beard trim</span> from 300 uah.
+                </li>
+                <li class="price-inner-item"
+                  ><span class="price-inner-desc">Mustache trim</span> from 200 uah.
+                </li>
+                <li class="price-inner-item"
+                  ><span class="price-inner-desc">Straight razor shave</span> from 200 uah.
+                </li>
               </ul>
             </li>
             <li class="price-item" data-aos="fade-left">
               <ul class="price-inner-list">
-                <li class="price-inner-item">Trainee’s haircut from 50 uah.</li>
-                <li class="price-inner-item">Haircut under the nozzle from 200 uah.</li>
-                <li class="price-inner-item">Children’s haircut (0-12 y.o.) from 300 uah.</li>
-                <li class="price-inner-item">Camouflage of gray hair from 200 uah.</li>
+                <li class="price-inner-item">
+                  <span class="price-inner-desc">Trainee’s haircut</span> from 50 uah.
+                </li>
+                <li class="price-inner-item">
+                  <span class="price-inner-desc">Haircut under the nozzle</span> from 200 uah.
+                </li>
+                <li class="price-inner-item">
+                  <span class="price-inner-desc">Children’s haircut (0-12 y.o.)</span> from 300 uah.
+                </li>
+                <li class="price-inner-item">
+                  <span class="price-inner-desc">Camouflage of gray hair</span> from 200 uah.
+                </li>
               </ul>
             </li>
           </ul>
@@ -185,7 +214,7 @@
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="section benefits">
+      <!-- <section class="section benefits">
         <div class="container benefits-container">
           <div class="benefits-left">
             <ul class="benefits-list">
@@ -216,9 +245,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team section" id="team">
+      <!-- <section class="team section" id="team">
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title team-title">Our barbers</h2>
@@ -336,9 +365,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery section -->
-      <section class="section gallery">
+      <!-- <section class="section gallery">
         <div class="container">
           <p class="uppertitle gallery-uppertitle">In Latin, "barba" means "beard"</p>
           <h2 hidden>Gallery</h2>
@@ -386,10 +415,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <div class="wrapper">
         <!-- Booking section -->
-        <section class="section booking">
+        <!-- <section class="section booking">
           <h2 class="title title-light">Online-booking</h2>
           <form class="booking-form" name="booking_form">
             <div class="booking-form-wrapper">
@@ -426,9 +455,9 @@
             </label>
             <button class="btn btn-light" type="submit">send</button>
           </form>
-        </section>
+        </section> -->
         <!-- Contacts section -->
-        <section class="section contacts" id="contacts">
+        <!-- <section class="section contacts" id="contacts">
           <h2 class="title title-light">Contacts</h2>
           <address class="contacts-address">
             <ul class="contacts-list">
@@ -469,11 +498,11 @@
             Every day from <time datetime="09:00">9:00</time> to
             <time datetime="22:00">22:00</time>
           </p>
-        </section>
+        </section> -->
       </div>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media">
@@ -499,10 +528,10 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="16" height="16">
@@ -544,10 +573,6 @@
 
           <label class="modal-form-agreement">
             <input class="modal-form-checkbox" type="checkbox" />
-            <!-- <svg class="modal-form-custom-checkbox" width="18" height="18">
-              <use class="checked" href="./images/icons.svg#check"></use>
-              <use class="unchecked" href="./images/icons.svg#uncheck"></use>
-            </svg> -->
             <span class="modal-form-agreement-text">
               I accept the terms and conditions of the
               <a class="modal-form-agreement-link" href="">Privacy Policy</a>
@@ -556,13 +581,82 @@
           <button class="modal-form-btn btn" type="submit" disabled>Send</button>
         </form>
       </div>
+    </div> -->
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li><a href="">+11 (000) 111-11-11</a></li>
+        <li><a href="">info@devstudio.com</a></li>
+      </ul>
+
+      <ul class="socials">
+        <li class="socials-item">
+          <a href="" class="socials-link" aria-label="Instagram link">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link" aria-label="Twitter link">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link" aria-label="Facebook link">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="" class="socials-link" aria-label="Linkedin link">
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/animation-on-scroll.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="./js/animation-on-scroll.js"></script> -->
     <script src="./js/modal.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/form.js"></script>
+    <!-- Mobile menu scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
