@@ -247,13 +247,34 @@
         </div>
       </section> -->
       <!-- Team section -->
-      <!-- <section class="team section" id="team">
-        <div class="container">
+      <section class="team section" id="team">
+        <div class="container team-container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title team-title">Our barbers</h2>
           <ul class="team-list card-set">
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-1.jpg" alt="" width="370" height="346" />
+              <!--
+                screen size = 380px;
+                frame size = 380px;
+                path to img = 380px * 2dpr = 760px => 836w
+               -->
+              <img
+                class="team-img"
+                srcset="
+                  ./images/team/img-1_370.jpg 370w,
+                  ./images/team/img-1_418.jpg 418w,
+                  ./images/team/img-1_450.jpg 450w,
+                  ./images/team/img-1_740.jpg 740w,
+                  ./images/team/img-1_836.jpg 836w,
+                  ./images/team/img-1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-1_450.jpg"
+                alt="John Smith"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -290,7 +311,23 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-2.jpg" alt="" width="370" height="346" />
+              <img
+                class="team-img"
+                srcset="
+                  ./images/team/img-2_370.jpg 370w,
+                  ./images/team/img-2_418.jpg 418w,
+                  ./images/team/img-2_450.jpg 450w,
+                  ./images/team/img-2_740.jpg 740w,
+                  ./images/team/img-2_836.jpg 836w,
+                  ./images/team/img-2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-1_450.jpg"
+                alt="Michele Doe"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <h3 class="team-name">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -327,7 +364,23 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-3.jpg" alt="" width="370" height="346" />
+              <img
+                class="team-img"
+                srcset="
+                  ./images/team/img-3_370.jpg 370w,
+                  ./images/team/img-3_418.jpg 418w,
+                  ./images/team/img-3_450.jpg 450w,
+                  ./images/team/img-3_740.jpg 740w,
+                  ./images/team/img-3_836.jpg 836w,
+                  ./images/team/img-3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-1_450.jpg"
+                alt="Alan Black"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <h3 class="team-name">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -365,21 +418,75 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Gallery section -->
-      <!-- <section class="section gallery">
+      <section class="section gallery">
         <div class="container">
           <p class="uppertitle gallery-uppertitle">In Latin, "barba" means "beard"</p>
           <h2 hidden>Gallery</h2>
           <ul class="gallery-list card-set">
             <li class="gallery-item card-set-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-1.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- for desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.webp 1x,
+                    ./images/gallery/img-1_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.jpg 1x,
+                    ./images/gallery/img-1_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.webp 1x,
+                    ./images/gallery/img-1_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.jpg 1x,
+                    ./images/gallery/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.webp 1x,
+                    ./images/gallery/img-1_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.jpg 1x,
+                    ./images/gallery/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-1_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
               <div class="overlay">
                 <p class="overlay-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, odit?
@@ -387,35 +494,197 @@
               </div>
             </li>
             <li class="gallery-item card-set-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-2.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- for desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.webp 1x,
+                    ./images/gallery/img-2_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.jpg 1x,
+                    ./images/gallery/img-2_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.webp 1x,
+                    ./images/gallery/img-2_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.jpg 1x,
+                    ./images/gallery/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.webp 1x,
+                    ./images/gallery/img-2_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.jpg 1x,
+                    ./images/gallery/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-2_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item card-set-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-3.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- for desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.webp 1x,
+                    ./images/gallery/img-3_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.jpg 1x,
+                    ./images/gallery/img-3_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.webp 1x,
+                    ./images/gallery/img-3_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.jpg 1x,
+                    ./images/gallery/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.webp 1x,
+                    ./images/gallery/img-3_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.jpg 1x,
+                    ./images/gallery/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-3_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item card-set-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-4.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- for desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.webp 1x,
+                    ./images/gallery/img-4_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.jpg 1x,
+                    ./images/gallery/img-4_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.webp 1x,
+                    ./images/gallery/img-4_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.jpg 1x,
+                    ./images/gallery/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- for mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.webp 1x,
+                    ./images/gallery/img-4_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.jpg 1x,
+                    ./images/gallery/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-4_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <div class="wrapper">
         <!-- Booking section -->
         <!-- <section class="section booking">

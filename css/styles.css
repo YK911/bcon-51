@@ -585,15 +585,44 @@ button {
   | Price styles
   |============================
 */
+/* from 320px to 480px */
 .price {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--main-bg-cl);
-  background-image: url('../images/price/bg-img.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url('../images/price/bg-img_mob@1x.png');
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url('../images/price/bg-img_mob@2x.png');
+  }
+}
+/* from 481px to 768px */
+@media only screen and (min-width: 481px) {
+  .price {
+    background-image: url('../images/price/bg-img_tab@1x.png');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .price {
+      background-image: url('../images/price/bg-img_tab@2x.png');
+    }
+  }
+}
+/* from 769px to desktop (max 1600px) */
+@media only screen and (min-width: 769px) {
+  .price {
+    background-image: url('../images/price/bg-img_desk@1x.png');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .price {
+      background-image: url('../images/price/bg-img_desk@2x.png');
+    }
+  }
 }
 .price-list {
   margin-bottom: 44px;
@@ -742,15 +771,22 @@ button {
 .team {
   background-color: #f7f7f7;
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-container {
+    max-width: 480px;
+  }
+}
 .team-title {
   margin-bottom: 44px;
 }
 .team-list {
   --row-indent: 50px;
+  --items: 1;
 }
-.team-item {
-}
-.team-img {
+@media only screen and (min-width: 1200px) {
+  .team-list {
+    --items: 3;
+  }
 }
 .team-wrapper {
   padding-top: 30px;
@@ -813,7 +849,17 @@ button {
   margin-bottom: 44px;
 }
 .gallery-list {
-  --items: 4;
+  --items: 1;
+}
+@media only screen and (min-width: 768px) {
+  .gallery-list {
+    --items: 2;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gallery-list {
+    --items: 4;
+  }
 }
 .gallery-item {
   position: relative;
